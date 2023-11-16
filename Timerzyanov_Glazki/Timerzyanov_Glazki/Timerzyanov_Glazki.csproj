@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,9 +67,63 @@
     <Compile Include="AddEditPage.xaml.cs">
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Agent.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentPriorityHistory.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentType.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
+    <Compile Include="Material.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialCountHistory.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialType.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCostHistory.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMaterial.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSale.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductType.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ServicesPage.xaml.cs">
       <DependentUpon>ServicesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimerzyanovModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimerzyanovModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimerzyanovModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimerzyanovModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimerzyanovModel.edmx</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -101,9 +164,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="TimerzyanovModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TimerzyanovModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TimerzyanovModel.edmx.diagram">
+      <DependentUpon>TimerzyanovModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +183,22 @@
   <ItemGroup>
     <Resource Include="Res\glazki-save.ico" />
     <Resource Include="Res\Глазки-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\picture.png" />
+    <Content Include="TimerzyanovModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TimerzyanovModel.Context.cs</LastGenOutput>
+      <DependentUpon>TimerzyanovModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="TimerzyanovModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TimerzyanovModel.edmx</DependentUpon>
+      <LastGenOutput>TimerzyanovModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

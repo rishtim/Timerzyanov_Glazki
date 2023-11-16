@@ -19,3 +19,10 @@ C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki
 C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\AddEditPage.g.cs
 C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\AddEditPage.baml
 C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\App.baml
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\bin\Debug\EntityFramework.dll
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\bin\Debug\EntityFramework.xml
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\Timerzyanov_Glazki_Content.g.cs
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\Timerzyanov_Glazki.csproj.CopyComplete
