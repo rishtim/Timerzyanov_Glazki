@@ -2,7 +2,6 @@ C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki
 C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\bin\Debug\Timerzyanov_Glazki.exe
 C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\bin\Debug\Timerzyanov_Glazki.pdb
 C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\Timerzyanov_Glazki.csproj.AssemblyReference.cache
-C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\Timerzyanov_Glazki.csproj.SuggestedBindingRedirects.cache
 C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\MainWindow.g.cs
 C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\App.g.cs
 C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\Timerzyanov_Glazki_MarkupCompile.cache

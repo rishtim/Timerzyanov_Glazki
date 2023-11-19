@@ -11,20 +11,42 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left">
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBox Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"
-                         Width="300" FontSize="15"></TextBox>
+                         Width="350" Height="40" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left"></TextBox>
+            </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <ComboBox Name="SortComb" SelectionChanged="SortComb_SelectionChanged" VerticalContentAlignment="Center" FontSize="20" Width="170" Height="40">
+                    <TextBlock>Сортировка</TextBlock>
+                    <TextBlock>Наименование (по возрастанию)</TextBlock>
+                    <TextBlock>Наименование (по убыванию)</TextBlock>
+                    <TextBlock>Размер скидки (по возрастанию)</TextBlock>
+                    <TextBlock>Размер скидки (по убыванию)</TextBlock>
+                    <TextBlock>Приоритет (по возрастанию)</TextBlock>
+                    <TextBlock>Приоритет (по убыванию)</TextBlock>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <ComboBox Name="FilterComb" SelectionChanged="FilterComb_SelectionChanged" VerticalContentAlignment="Center" FontSize="20" Width="170" Height="40">
+                    <TextBlock>Все типы</TextBlock>
+                    <TextBlock>ООО</TextBlock>
+                    <TextBlock>ОАО</TextBlock>
+                    <TextBlock>ЗАО</TextBlock>
+                    <TextBlock>МКК</TextBlock>
+                    <TextBlock>МФО</TextBlock>
+                    <TextBlock>ПАО</TextBlock>
+                </ComboBox>
             </StackPanel>
         </WrapPanel>
 
-        <ListView Name="AgentListView">
+        <ListView Name="AgentListView" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
