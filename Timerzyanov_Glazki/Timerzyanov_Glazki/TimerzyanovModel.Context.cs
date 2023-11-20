@@ -15,13 +15,13 @@ namespace Timerzyanov_Glazki
     
     public partial class Timerzyanov_GlazkiEntities : DbContext
     {
-        private static Timerzyanov_GlazkiEntities _context;
-        
+
+        private static Timerzyanov_GlazkiEntities _context; 
+
         public static Timerzyanov_GlazkiEntities GetContext()
         {
             if (_context == null)
                 _context = new Timerzyanov_GlazkiEntities();
-
             return _context;
         }
         public Timerzyanov_GlazkiEntities()
