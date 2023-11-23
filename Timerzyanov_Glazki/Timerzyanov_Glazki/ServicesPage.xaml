@@ -45,8 +45,14 @@
                     <TextBlock>ПАО</TextBlock>
                 </ComboBox>
             </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <Button Height="40" Content="Добавить" Name="AddButton" Click="AddButton_Click"
+HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
+                <Button Height="40" Content="Редактировать" Name="EditButton"
+                Click="EditButton_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
+            </StackPanel>
         </WrapPanel>
-
+        
         <ListView Name="AgentListView" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>

@@ -21,7 +21,6 @@ namespace Timerzyanov_Glazki
             this.ProductSale = new HashSet<ProductSale>();
             this.Shop = new HashSet<Shop>();
         }
-
     
         public int ID { get; set; }
         public int AgentTypeID { get; set; }

@@ -185,9 +185,6 @@
     <Resource Include="Res\Глазки-save.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Res\picture.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
@@ -321,6 +318,9 @@
     <Resource Include="agents\agent_97.png" />
     <Resource Include="agents\agent_98.png" />
     <Resource Include="agents\agent_99.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\picture.png" />
     <Content Include="TimerzyanovModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TimerzyanovModel.edmx</DependentUpon>

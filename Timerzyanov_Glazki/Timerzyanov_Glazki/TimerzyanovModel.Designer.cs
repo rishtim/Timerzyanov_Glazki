@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "D:\3 курс\исп32\Timerzyanov_Glazki\Timerzyanov_Glazki\TimerzyanovModel.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\TimerzyanovModel.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.
