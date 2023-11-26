@@ -164,6 +164,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -178,11 +179,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Res\glazki-save.ico" />
     <Resource Include="Res\Глазки-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\picture.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -320,7 +321,6 @@
     <Resource Include="agents\agent_99.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Res\picture.png" />
     <Content Include="TimerzyanovModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TimerzyanovModel.edmx</DependentUpon>

@@ -190,10 +190,7 @@ namespace Timerzyanov_Glazki
             TableList = CurrentAgents;
             ChangePage(0, 0);
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.MainFrame.Navigate(new AddEditPage());
-        }
+
 
         private void TBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -227,12 +224,22 @@ namespace Timerzyanov_Glazki
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new AddEditPage());
+            Manager.MainFrame.Navigate(new AddEditPage(null));
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new AddEditPage());
+            Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Agent));
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                Timerzyanov_GlazkiEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                AgentListView.ItemsSource = Timerzyanov_GlazkiEntities.GetContext().Agent.ToList();
+            }
+            UpdateAgents();
         }
     }
 }
