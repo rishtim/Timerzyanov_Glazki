@@ -23,7 +23,7 @@ namespace Timerzyanov_Glazki
     {
 
         private Agent _currentAgent = new Agent();
-        
+        public bool CheckStatusEdit = false;
         public AddEditPage(Agent SelectedAgent)
         {
             InitializeComponent();
@@ -31,7 +31,8 @@ namespace Timerzyanov_Glazki
             if (SelectedAgent != null)
             {
                 _currentAgent = SelectedAgent;
-                EditComb.SelectedIndex = _currentAgent.AgentTypeID + 1;
+                EditComb.SelectedIndex = _currentAgent.AgentTypeID-1;
+                CheckStatusEdit = true;
             }
             DataContext = _currentAgent;
         }
@@ -62,15 +63,13 @@ namespace Timerzyanov_Glazki
             if (string.IsNullOrWhiteSpace(_currentAgent.Address))
                 errors.AppendLine("Укажите адрес");
 
-            if (string.IsNullOrWhiteSpace(_currentAgent.INN.ToString()))
+            if (string.IsNullOrWhiteSpace(_currentAgent.INN))
                 errors.AppendLine("Укажите ИНН");
-            if (_currentAgent.INN.Length > 12)
-                errors.AppendLine("Длина ИНН не должна превышать 12 символов");
+            
 
-            if (string.IsNullOrWhiteSpace(_currentAgent.KPP.ToString()))
+            if (string.IsNullOrWhiteSpace(_currentAgent.KPP))
                 errors.AppendLine("Укажите КПП");
-            if (_currentAgent.KPP.Length > 9)
-                errors.AppendLine("Длина КПП не должна превышать 9 символов");
+            
 
             if (string.IsNullOrWhiteSpace(_currentAgent.DirectorName))
                 errors.AppendLine("Укажите имя директора");
@@ -91,20 +90,27 @@ namespace Timerzyanov_Glazki
                 MessageBox.Show(errors.ToString());
                 return;
             }
-            if (_currentAgent.ID == 0)
-                Timerzyanov_GlazkiEntities.GetContext().Agent.Add(_currentAgent);
-            try
+
+            var allAgents = Timerzyanov_GlazkiEntities.GetContext().Agent.ToList();
+            allAgents = allAgents.Where(p => p.Title == _currentAgent.Title).ToList();
+
+            if (allAgents.Count == 0 || CheckStatusEdit == true)
             {
-                Timerzyanov_GlazkiEntities.GetContext().SaveChanges();
-                MessageBox.Show("Информация сохранена");
-                Manager.MainFrame.GoBack();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-                if (ex.InnerException != null)
-                    MessageBox.Show(ex.InnerException.ToString());
-                MessageBox.Show("Ошибка" + ex.HResult + "\n" + ex.Message);
+                if (_currentAgent.ID == 0)
+                    Timerzyanov_GlazkiEntities.GetContext().Agent.Add(_currentAgent);
+                try
+                {
+                    Timerzyanov_GlazkiEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Информация сохранена");
+                    Manager.MainFrame.GoBack();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                    if (ex.InnerException != null)
+                        MessageBox.Show(ex.InnerException.ToString());
+                    MessageBox.Show("Ошибка" + ex.HResult + "\n" + ex.Message);
+                }
             }
         }
 
@@ -116,5 +122,36 @@ namespace Timerzyanov_Glazki
             }
         }
 
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            var currentAgent = (sender as Button).DataContext as Agent;
+
+            var CurrentProductSale = Timerzyanov_GlazkiEntities.GetContext().ProductSale.ToList();
+            CurrentProductSale = CurrentProductSale.Where(p => p.AgentID == _currentAgent.ID).ToList();
+
+            var CurrentPriorityHistory = Timerzyanov_GlazkiEntities.GetContext().AgentPriorityHistory.ToList();
+            CurrentPriorityHistory=CurrentPriorityHistory.Where(p=>p.AgentID==_currentAgent.ID).ToList();
+
+            if (CurrentProductSale.Count != 0)
+                MessageBox.Show("Невозможно выполнить удаление, так как у агента есть продажи!");
+            else
+            {
+                if (MessageBox.Show("Вы точно хотите выполнить удаление?", "Внимание!",
+                    MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    try
+                    {
+                        Timerzyanov_GlazkiEntities.GetContext().Agent.Remove(_currentAgent);
+                        //Timerzyanov_GlazkiEntities.GetContext().AgentPriorityHistory.Remove(_currentAgent);
+                        Timerzyanov_GlazkiEntities.GetContext().SaveChanges();
+                        Manager.MainFrame.GoBack();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+                }
+            }
+        }
     }
 }
