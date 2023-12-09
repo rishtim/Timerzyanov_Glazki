@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Timerzyanov_Glazki
 {
     /// <summary>
@@ -21,7 +22,6 @@ namespace Timerzyanov_Glazki
     /// </summary>
     public partial class AddEditPage : Page
     {
-
         private Agent _currentAgent = new Agent();
         public bool CheckStatusEdit = false;
         public AddEditPage(Agent SelectedAgent)
@@ -33,6 +33,10 @@ namespace Timerzyanov_Glazki
                 _currentAgent = SelectedAgent;
                 EditComb.SelectedIndex = _currentAgent.AgentTypeID-1;
                 CheckStatusEdit = true;
+            }
+            if (CheckStatusEdit == false)
+            {
+                DeleteButton.IsEnabled = false;
             }
             DataContext = _currentAgent;
         }
@@ -111,6 +115,11 @@ namespace Timerzyanov_Glazki
                         MessageBox.Show(ex.InnerException.ToString());
                     MessageBox.Show("Ошибка" + ex.HResult + "\n" + ex.Message);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Агент уже существует!");
+                return;
             }
         }
 

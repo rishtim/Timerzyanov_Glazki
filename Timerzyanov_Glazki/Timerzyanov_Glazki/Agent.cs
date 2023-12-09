@@ -49,5 +49,6 @@ namespace Timerzyanov_Glazki
                 return AgentType.Title;
             }
         }
+
     }
 }

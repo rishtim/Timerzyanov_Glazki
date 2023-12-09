@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Timerzyanov_Glazki"
         mc:Ignorable="d"
-        Title="Тимерзянов Глазки" Height="450" Width="800" FontFamily="Century Gothic" Icon="Res/glazki-save.ico" Background="#FFFFFF">
+        Title="Тимерзянов Глазки" Height="750" Width="1000" FontFamily="Century Gothic" Icon="Res/glazki-save.ico" Background="#FFFFFF">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
