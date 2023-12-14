@@ -49,14 +49,14 @@
             <StackPanel Margin="10" Orientation="Horizontal">
                 <Button Height="40" Content="Добавить" Name="AddButton" Click="AddButton_Click"
 HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
-                
+                <Button Content="Изменить приоритет на ..." Width="270" Height="40" Name="PriorityEdit" Click="PriorityEdit_Click"></Button>
             </StackPanel>
         </WrapPanel>
         
-        <ListView Name="AgentListView" Grid.Row="1">
+        <ListView Name="AgentListView" Grid.Row="1" SelectionChanged="AgentListView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid Background="{Binding FonStyle}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="160"></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>

@@ -122,7 +122,7 @@ namespace Timerzyanov_Glazki
         {
             get
             {
-                if (getDiscount() >= 25)
+                if (getDiscount() >= 5)
                 {
                     return (SolidColorBrush)new BrushConverter().ConvertFromString("LightGreen");
                 }

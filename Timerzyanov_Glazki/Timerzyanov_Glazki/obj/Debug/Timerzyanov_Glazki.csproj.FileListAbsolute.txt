@@ -81,3 +81,9 @@ D:\3 курс\исп32\Timerzyanov_Glazki11\Timerzyanov_Glazki\Timerzyanov_Glazk
 D:\3 курс\исп32\Timerzyanov_Glazki11\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\Timerzyanov_Glazki.csproj.CopyComplete
 D:\3 курс\исп32\Timerzyanov_Glazki11\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\Timerzyanov_Glazki.exe
 D:\3 курс\исп32\Timerzyanov_Glazki11\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\Timerzyanov_Glazki.pdb
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\PriorityEditWindow.g.cs
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\PriorityEditWindow.baml
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\AddSalesPage.g.cs
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\AgentSalePage.g.cs
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\AddSalesPage.baml
+C:\Users\Resha\Desktop\учеба\програм модули\Timerzyanov_Glazki\Timerzyanov_Glazki\Timerzyanov_Glazki\obj\Debug\AgentSalePage.baml

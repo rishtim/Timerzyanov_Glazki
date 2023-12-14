@@ -22,5 +22,29 @@ namespace Timerzyanov_Glazki
     
         public virtual Agent Agent { get; set; }
         public virtual Product Product { get; set; }
+
+        public string Title
+        {
+            get
+            {
+                return Product.Title;
+            }
+        }
+
+        public string Date
+        {
+            get
+            {
+                return SaleDate.ToShortDateString();
+            }
+        }
+
+        public string AgentTitle
+        {
+            get
+            {
+                return Agent.Title;
+            }
+        }
     }
 }

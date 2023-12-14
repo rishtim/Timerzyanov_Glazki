@@ -162,5 +162,10 @@ namespace Timerzyanov_Glazki
                 }
             }
         }
+
+        private void SalesButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AgentSalePage(_currentAgent));
+        }
     }
 }

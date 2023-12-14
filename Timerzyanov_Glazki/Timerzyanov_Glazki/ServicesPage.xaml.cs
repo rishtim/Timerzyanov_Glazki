@@ -33,7 +33,7 @@ namespace Timerzyanov_Glazki
             AgentListView.ItemsSource = currentAgents;
             SortComb.SelectedIndex = 0;
             FilterComb.SelectedIndex = 0;
-
+            PriorityEdit.IsEnabled = false;
             UpdateAgents();
         }
 
@@ -139,11 +139,11 @@ namespace Timerzyanov_Glazki
             }
             if (SortComb.SelectedIndex == 3) //скидка доделать
             {
-                CurrentAgents = CurrentAgents.OrderBy(p => p.Title).ToList();
+                CurrentAgents = CurrentAgents.OrderBy(p => p.Discount).ToList();
             }
             if (SortComb.SelectedIndex == 4) //скидка доделать
             {
-                CurrentAgents = CurrentAgents.OrderBy(p => p.Title).ToList();
+                CurrentAgents = CurrentAgents.OrderByDescending(p => p.Discount).ToList();
             }
             if (SortComb.SelectedIndex == 5)
             {
@@ -240,6 +240,52 @@ namespace Timerzyanov_Glazki
                 AgentListView.ItemsSource = Timerzyanov_GlazkiEntities.GetContext().Agent.ToList();
             }
             UpdateAgents();
+        }
+
+        private void PriorityEdit_Click(object sender, RoutedEventArgs e)
+        {
+            int maxPriority=0;
+            PriorityEditWindow window = new PriorityEditWindow();
+            foreach (Agent AgentLV in AgentListView.SelectedItems)
+            {
+                if (AgentLV.Priority > maxPriority)
+                {
+                    maxPriority = AgentLV.Priority;
+                }
+            }
+            window.PriorityText.Text = maxPriority.ToString();
+            window.ShowDialog();
+            if (string.IsNullOrWhiteSpace(window.PriorityText.Text))
+            {
+                return;
+            }
+            foreach (Agent AgentLV in AgentListView.SelectedItems)
+            {
+                AgentLV.Priority = Convert.ToInt32(window.PriorityText.Text);
+            }
+            try
+            {
+                Timerzyanov_GlazkiEntities.GetContext().SaveChanges();
+                MessageBox.Show("Информация сохранена");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+
+            UpdateAgents();
+        }
+
+        private void AgentListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (AgentListView.SelectedItems.Count > 0)
+            {
+                PriorityEdit.IsEnabled=true;
+            }
+            else
+            {
+                PriorityEdit.IsEnabled=false;
+            }
         }
     }
 }

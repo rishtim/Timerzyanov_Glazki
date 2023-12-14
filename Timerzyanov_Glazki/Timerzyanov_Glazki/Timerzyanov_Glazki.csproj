@@ -67,11 +67,17 @@
     <Compile Include="AddEditPage.xaml.cs">
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddSalesPage.xaml.cs">
+      <DependentUpon>AddSalesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Agent.cs">
       <DependentUpon>TimerzyanovModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AgentPriorityHistory.cs">
       <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentSalePage.xaml.cs">
+      <DependentUpon>AgentSalePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="AgentType.cs">
       <DependentUpon>TimerzyanovModel.tt</DependentUpon>
@@ -85,6 +91,9 @@
     </Compile>
     <Compile Include="MaterialType.cs">
       <DependentUpon>TimerzyanovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriorityEditWindow.xaml.cs">
+      <DependentUpon>PriorityEditWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>TimerzyanovModel.tt</DependentUpon>
@@ -129,6 +138,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddSalesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AgentSalePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -141,6 +158,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PriorityEditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ServicesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
